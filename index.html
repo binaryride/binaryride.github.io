@@ -1,0 +1,1412 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Binary Ride - Online Computer Resources And Tutorials</title>
+  <meta name="description"
+        content="Easy to understand tutorials on computer's hardware, software, programming, algorithms, SEO, networking, artificial intelligence (AI), cyber security, hacking etc">
+
+  <!--<meta name="Keywords"
+    content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,binary,binaryride,binary ride,tutorials,programming,ai,artificial intelligence,hardware,software,programming languages,networking,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips,computer, hacking, cyber security, owasp, seo">-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="apple-touch-icon" href="./logo2.jpg">
+  <!-- Place favicon.ico in the root directory -->
+
+
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./br-css/br-main.css">
+  <link rel="stylesheet" href="./br-css/br-lab-theme.css">
+  <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+  <style>
+    /* MAIN */
+    :root {
+      --primary-color: black;
+      --primaryrgb-color: 0, 0, 0;
+
+      --secondary-color: #ccc;
+      --secondaryrgb-color: 204, 204, 204;
+
+      --tertiary-color: #eee;
+      --tertiaryrgb-color: 238, 238, 238;
+
+      --color: #0F0;
+      --elegant-color: #1b2426;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      /* background: #f1f1f1; */
+      background: var(--primary-color);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+      background: var(--primary-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      /* background: #888; */
+      background: white;
+      /* border-radius: 10px; */
+      border: 1px solid var(--primary-color);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      /* background: #555; */
+      background: #f1f1f1;
+      /* background: white; */
+      ;
+    }
+
+    ::-webkit-scrollbar-button {
+      background: var(--primary-color);
+      /* border-radius: 0 10px 10px 0; */
+    }
+
+    ::-webkit-scrollbar-corner {}
+
+    ::-webkit-resizer {}
+
+
+
+    html,
+    select,
+    button {
+      color: #222;
+      font-size: 1em;
+      line-height: 1.7;
+      font-family: Verdana, sans-serif;
+      text-rendering: optimizeSpeed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+    ::-moz-selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    ::selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    /*
+ * A better looking default horizontal rule
+ */
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    /*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+    audio,
+    canvas,
+    iframe,
+    img,
+    svg,
+    video {
+      vertical-align: middle;
+    }
+
+    /*
+ * Remove default fieldset styles.
+ */
+
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    /*
+ * Allow only vertical resizing of textareas.
+ */
+
+    textarea {
+      resize: vertical;
+    }
+
+    /* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+    .browserupgrade {
+      margin: 0.2em 0;
+      background: #ccc;
+      color: #000;
+      padding: 0.2em 0;
+    }
+
+    /* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+    /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+    /*
+ * Hide visually and from screen readers
+ */
+
+    .hidden {
+      display: none !important;
+    }
+
+    /*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+    .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+      /* 1 */
+    }
+
+    /*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+    .sr-only.focusable:active,
+    .sr-only.focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      white-space: inherit;
+      width: auto;
+    }
+
+    /*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+    .invisible {
+      visibility: hidden;
+    }
+
+    /*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+    .clearfix:before,
+    .clearfix:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */
+    }
+
+    .clearfix:after {
+      clear: both;
+    }
+
+    /* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+    @media only screen and (min-width: 35em) {
+      /* Style adjustments for viewports that meet the condition */
+    }
+
+    @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+      /* Style adjustments for high resolution devices */
+    }
+
+    /* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+    @media print {
+
+      *,
+      *:before,
+      *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      a,
+      a:visited {
+        text-decoration: underline;
+      }
+
+      a[href]:after {
+        content: " ("attr(href) ")";
+      }
+
+      abbr[title]:after {
+        content: " ("attr(title) ")";
+      }
+
+      /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+      a[href^="#"]:after,
+      a[href^="javascript:"]:after {
+        content: "";
+      }
+
+      pre {
+        white-space: pre-wrap !important;
+      }
+
+      pre,
+      blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+      }
+
+      /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+      thead {
+        display: table-header-group;
+      }
+
+      tr,
+      img {
+        page-break-inside: avoid;
+      }
+
+      p,
+      h2,
+      h3 {
+        orphans: 3;
+        widows: 3;
+      }
+
+      h2,
+      h3 {
+        page-break-after: avoid;
+      }
+    }
+
+    /* CONTENT */
+    .br-page-container {
+      position: absolute;
+      top: 0;
+      margin-top: 52px;
+      /* height: 100%; */
+      margin-left: 230px;
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: fill-available;
+    }
+
+
+
+    @media screen and (max-width: 999px) {
+
+      .br-page-container {
+        margin-left: 0px;
+      }
+
+      .book-title {
+        display: none !important;
+      }
+
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .br-page-container .page {
+        width: 100%;
+        /* padding-top: 20px; */
+      }
+
+      .page .content {
+        padding: 0 30px 60px;
+      }
+
+    }
+
+
+    @media screen and (max-width: 460px) {
+
+      .page .heading {
+        /* top: 56px; */
+        flex-wrap: wrap-reverse;
+        font-size: 25px;
+
+      }
+
+    }
+
+    /* NAV-LOGO */
+    .nav-logo {
+      padding: 10px 10px 10px 0;
+      /* font-weight: 600; */
+      letter-spacing: 2px;
+      color: white;
+      animation: blur 5s ease-out normal;
+      -webkit-animation: blur 5s ease-out normal;
+      text-shadow: 0px 0px 5px black;
+      cursor: pointer;
+    }
+
+    .nav-logo:nth-child(1) {
+      animation-delay: 0.1s;
+      -webkit-animation-delay: 0.1s;
+    }
+
+    /* .nav-logo span:nth-child(2) {
+      animation-delay: 0.3s;
+      -webkit-animation-delay: 0.3s;
+    } */
+
+
+    @keyframes blur {
+      0% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+      }
+
+      5% {
+        text-shadow: 0 0 90px #fff;
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      20% {
+        text-shadow: 0 0 0px #fff;
+      }
+
+      80% {
+        text-shadow: 0 0 0px #fff;
+      }
+
+      100% {
+        color: #fff;
+        opacity: 1;
+      }
+
+      /* 95% {
+        text-shadow: 0 0 90px #fff;
+      }
+
+      100% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+      } */
+    }
+
+    @-webkit-keyframes blur {
+      0% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+        color: transparent;
+      }
+
+      5% {
+        text-shadow: 0 0 90px #fff;
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      20% {
+        text-shadow: 0 0 0px #fff;
+      }
+
+      80% {
+        text-shadow: 0 0 0px #fff;
+      }
+
+      100% {
+        opacity: 1;
+      }
+
+      /* 95% {
+        text-shadow: 0 0 90px #fff;
+      }
+
+      100% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+      } */
+    }
+
+
+    /* NAV */
+    .nav {
+      display: flex;
+      position: relative;
+      background: var(--primary-color);
+      padding: 0 1em;
+      /* box-shadow: 0px 10px 25px -15px black; */
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .nav__bg-wrapper {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+      will-change: opacity;
+    }
+
+    .nav__bg-wrapper.is-visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .nav__bg {
+      width: 300px;
+      height: 200px;
+      background: white;
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+      transform-origin: left top;
+      will-change: transform;
+      /* box-shadow:
+      0 50px 100px -20px rgba(50, 50, 93, .25),
+      0 30px 60px -30px rgba(0, 0, 0, .3); */
+    }
+
+    .nav__bg.is-animatable {
+      transition: .3s;
+    }
+
+    .nav__sections {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+    }
+
+    .nav__section {
+      position: relative;
+    }
+
+    .nav__section>a {
+      text-decoration: none;
+      text-shadow: 0px 0px 5px black;
+    }
+
+    .nav__section:hover .nav__label,
+    .nav__active,
+    .br-nav-lab:hover {
+      /* opacity: .6; */
+      /* text-shadow: 0px -2px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5); */
+      background: black;
+      outline: 1px dashed var(--color);
+      color: var(--color) !important;
+      cursor: pointer;
+    }
+
+    .nav__section:hover .nav__links {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .nav__label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 10px 15px;
+      color: white;
+      transition: .3s;
+      font-size: 14px;
+    }
+
+    .nav__links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 1.875em;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    .nav__links--large {
+      width: 25em;
+    }
+
+    .nav__links--medium {
+      width: 18.75em;
+    }
+
+    .nav__links--small {
+      width: 12.5em;
+    }
+
+    .nav__item {
+      color: #666;
+    }
+
+    .nav__item:not(:last-of-type) {
+      margin-bottom: 0.625em;
+    }
+
+    .br-nav-lab {
+      color: white;
+      font-size: 14px;
+      right: 1em;
+      position: absolute;
+      height: 100%;
+      padding: 10px;
+      text-decoration: none;
+      text-shadow: 0px 0px 5px black;
+    }
+
+    .br-nav-menu {
+      display: none;
+      color: white;
+      right: 0;
+      position: absolute;
+      height: 100%;
+      text-decoration: none;
+      text-shadow: 0px 0px 5px black;
+      padding: 0 4px;
+    }
+
+
+    @media screen and (max-width: 999px) {
+
+      .nav__sections {
+        display: none;
+      }
+
+      .br-nav-lab {
+        display: none;
+      }
+
+      .br-nav-menu {
+        display: block;
+      }
+
+    }
+
+    @media screen and (max-width: 300px) {
+      .br-inary {
+        display: none;
+      }
+    }
+
+
+    /* Cards */
+    .br-cards {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      margin-top: 80px;
+      margin-bottom: 60px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .br-cards__item {
+      display: flex;
+      padding: 2rem;
+    }
+
+    /* @media(min-width: 40rem) {
+  .br-cards__item {
+    width: 50%;
+  }
+}
+
+@media(min-width: 56rem) {
+  .br-cards__item {
+    width: 33.3333%;
+  }
+} */
+
+    .br-card {
+      background-color: white;
+      border-radius: 10px;
+      /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
+      box-shadow: 0 10px 17px -10px black;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+
+    }
+
+    .br-card .br-card__image:hover {
+      /* filter: contrast(100%); */
+      filter: brightness(1);
+    }
+
+    .br-card__content {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      align-items: center;
+    }
+
+    .br-card__image {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      /* filter: contrast(70%); */
+      filter: brightness(0.9);
+      overflow: hidden;
+      position: relative;
+      /* transition: filter 0.5s cubic-bezier(.43, .41, .22, .91); */
+    }
+
+    @media only screen and (min-width: 40rem) {
+      .br-card__image::before {
+        padding-top: 66.6%;
+      }
+    }
+
+    .br-icon {
+      height: 35.75%;
+      background: black;
+      padding: 30px;
+    }
+
+    .br-card__image::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+    }
+
+    .br-card__title {
+      color: #696969;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .br-card__text {
+      flex: 1 1 auto;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+      margin-bottom: 70px;
+      width: 200px;
+    }
+
+    .br-card__btn {
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      width: 100%;
+      border: none;
+      height: 50px;
+      cursor: pointer;
+      background: var(--secondary-color);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .br-card__btn:hover {
+      background: green;
+      color: white;
+    }
+
+    .card__image--getstarted {
+      background-image: url('../br-asset/computer1.jpg');
+    }
+
+    .br-card .text {
+      color: var(--color);
+      font-size: 35px;
+      font-weight: bold;
+      max-width: 200px;
+    }
+
+    /* .card__image--comingsoon {
+      background-image: url('../br-asset/computer1.png');
+    } */
+
+
+    /* Cards */
+
+    /* Search */
+    .gsc-control-cse {
+      border-color: var(--primary-color) !important;
+      background-color: var(--primary-color) !important;
+      padding: 0 !important;
+    }
+
+    .gsc-search-box td {
+      border-bottom: none;
+      padding: 0 5px !important;
+    }
+
+    form.gsc-search-box,
+    table.gsc-search-box {
+      margin-bottom: 0 !important;
+    }
+
+    .gsib_a {
+      padding: 0 5px !important;
+    }
+
+    .gsc-search-button-v2 {
+      border-bottom-right-radius: 8px !important;
+      border-top-right-radius: 8px !important;
+    }
+
+    /* Search */
+  </style>
+
+  <script data-ad-client="ca-pub-1771672755804464" async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script type="application/ld+json">
+    [{
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "name": "Get Started"
+    }, {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "name": "Javascript"
+    }, {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "name": "SEO"
+    }, {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "name": "Hacking"
+    }, {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "name": "BR Lab"
+    }, {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "name": "DONATE"
+    }, {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "name": "Contact Us"
+    }]
+
+  </script>
+</head>
+
+<body>
+
+
+  <!-- Add site or application content here -->
+
+  <!-- NAV -->
+  <div class="nav">
+
+    <div class="br-menu">
+      <i class="las la-bars la-lg"></i>
+    </div>
+
+    <div class="nav-logo flex-center" id="nav-logo">
+      <i class="las la-terminal la-2x pr-10"></i>
+      <b style="border-bottom: 1px solid var(--color);;color: var(--color);">B</b><span
+            class="br-inary">inary&nbsp;</span><b
+         style="border-bottom: 1px solid var(--color);;color: var(--color);">R</b><span class="br-inary">ide</span>
+    </div>
+
+
+    <ul class="nav__sections">
+      <li class="nav__section"><a class="nav__label" href="./br-get-started/index.html" title="Computer Tutorial">Get
+          Started</a>
+      </li>
+      <li class="nav__section"><a class="nav__label" href="./br-javascript/index.html"
+           title="Javascript Tutorial">Javascript</a>
+      </li>
+      <li class="nav__section"><a class="nav__label" href="./br-seo/index.html" title="SEO Tutorial">SEO</a>
+      </li>
+      <li class="nav__section"><a class="nav__label" href="./br-hacking/index.html" title="Hacking Tutorial">Hacking</a>
+      </li>
+      <li class="br-search nav__section flex-center">
+        <script async src="https://cse.google.com/cse.js?cx=2aba2e4a18c77c4cf"></script>
+        <div class="gcse-search"></div>
+      </li>
+    </ul>
+
+
+    <a class="br-nav-lab flex-center" href="./br-lab/index.html" title="BR Lab">
+      <i class="las la-flask la-2x pr-10"></i> BR Lab
+    </a>
+    <div class="br-nav-menu br-dropdown">
+      <i class="las la-ellipsis-v la-2x pr-10 mt-10"></i>
+      <div class="br-dropdown-content">
+        <a class="br-dropdown-links flex-center" href="./br-lab/index.html" title="BR Lab">
+          <i class="las la-flask la-2x pr-10"></i>BR Lab
+        </a>
+        <a class="br-dropdown-links flex-center" href="./br-get-started/index.html" title="Computer Tutorial">Get
+          Started</a>
+        <a class="br-dropdown-links flex-center" href="./br-javascript/index.html"
+           title="Javascript Tutorial">Javascript</a>
+        <a class="br-dropdown-links flex-center" href="./br-seo/index.html" title="SEO Tutorial">SEO</a>
+        <a class="br-dropdown-links flex-center" href="./br-hacking/index.html" title="Hacking Tutorial">Hacking</a>
+      </div>
+    </div>
+
+  </div>
+  <!-- END NAV -->
+
+
+
+  <!-- CONTENT -->
+  <div class="br-main-container">
+    <!-- LSB -->
+    <div class="sidebar">
+      <canvas id="br-rain"></canvas>
+      <script>
+        let c, ctx, brRainChars, font_size, drops
+
+        function brRainInit() {
+          c = document.getElementById("br-rain");
+          ctx = c.getContext("2d");
+
+          //making the canvas full screen
+          c.height = window.innerHeight;
+          // c.width = window.innerWidth;
+          c.width = "230";
+
+          //Binary Ride Characters
+          brRainChars = "binaryride10";
+
+          //converting the string into an array of single characters
+          brRainChars = brRainChars.split("");
+
+          font_size = 15;
+          let columns = c.width / font_size; //number of columns for the rain
+          //an array of drops - one per column
+          drops = [];
+          //x below is the x coordinate
+          //1 = y co-ordinate of the drop(same for every drop initially)
+          for (let x = 0; x < columns; x++)
+            drops[x] = 1;
+
+        }
+
+        //drawing the characters
+        function draw() {
+          //Black BG for the canvas
+          //translucent BG to show trail
+          ctx.fillStyle = "rgba(0, 0, 0, 0.06)";
+          ctx.fillRect(0, 0, c.width, c.height);
+
+          ctx.fillStyle = "#0F0"; //green text
+          ctx.font = font_size + "px arial";
+          //looping over drops
+          for (let i = 0; i < drops.length; i++) {
+            //a random brRainChars character to print
+            let text = brRainChars[Math.floor(Math.random() * brRainChars.length)];
+            //x = i*font_size, y = value of drops[i]*font_size
+            ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+            //sending the drop back to the top randomly after it has crossed the screen
+            //adding a randomness to the reset to make the drops scattered on the Y axis
+            if (drops[i] * font_size > c.height && Math.random() > 0.975)
+              drops[i] = 0;
+
+            //incrementing Y coordinate
+            drops[i]++;
+          }
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+          brRainInit();
+          let brRainInterval = setInterval(draw, 50);
+          if (window.addEventListener) {
+            window.addEventListener("resize", () => {
+              clearInterval(brRainInterval);
+              brRainInit();
+              brRainInterval = setInterval(draw, 50);
+            });
+          }
+        });
+
+      </script>
+      <!-- <canvas id="br-particle-anim"></canvas> -->
+    </div>
+    <!-- END LSB -->
+
+    <div class="br-page-container">
+
+
+      <div class="br-prsb">
+        <div class="page">
+          <!-- <div class="fade-line"></div> -->
+          <div class="heading bs-2">
+            <h1 class="chapter-title flex-center" id="type">
+            </h1>
+          </div>
+
+          <div class="content">
+            <p style="margin: 60px;
+            font-size: 18px;
+            text-align: center;">
+              <b>B</b>inary <b>R</b>ide (<i>abbr.</i> <b>BR</b>) will take you on a journey🚀 of the
+              computer💻 world🌎,
+              starting
+              from
+              Computer's Etymology, History, Hardware, Software, Programming Languages, Networking, AI🤖 .... to the
+              future
+              and
+              beyond !
+            </p>
+
+
+            <!-- <p>
+              For a <b>Quick Start</b>, you can
+              <a class="br-inline-link" href="./br-get-started/index.html" title="Computer Tutorial">
+                Click Here to Get Started !
+              </a>
+            </p> -->
+
+            <ul class="br-cards">
+              <li class="br-cards__item">
+                <div class="br-card">
+                  <div class="br-card__image card__image--getstarted"></div>
+                  <div class="br-card__content">
+                    <div class="br-card__title">Get Started</div>
+                    <p class="br-card__text">In this tutorial you will learn some fundamental and essential things about
+                      computers. Get a quick boost now !</p>
+                    <a class="br-card__btn flex-center" href="./br-get-started/index.html"
+                       title="Computer Tutorial">Let's Learn</a>
+                  </div>
+                </div>
+              </li>
+              <li class="br-cards__item">
+                <div class="br-card">
+                  <div class="br-icon flex-center"><span class="text">JS</span></div>
+                  <div class="br-card__content">
+                    <div class="br-card__title">JavaScript</div>
+                    <p class="br-card__text">In this tutorial you will learn all about JavaScript, which would help you
+                      to add interactivity to your website.</p>
+                    <a class="br-card__btn flex-center" href="./br-javascript/index.html"
+                       title="Javascript Tutorial">Let's Learn</a>
+                  </div>
+                </div>
+              </li>
+              <li class="br-cards__item">
+                <div class="br-card">
+                  <div class="br-icon flex-center"><span class="text">SEO</span></div>
+                  <div class="br-card__content">
+                    <div class="br-card__title">SEO</div>
+                    <p class="br-card__text">In this tutorial you will learn all about Search Engine Optimization, which
+                      would help you
+                      to increase traffic to your website.</p>
+                    <a class="br-card__btn flex-center" href="./br-seo/index.html" title="SEO Tutorial">Let's Learn</a>
+                  </div>
+                </div>
+              </li>
+              <li class="br-cards__item">
+                <div class="br-card">
+                  <div class="br-icon flex-center"><span class="text">Hacking</span></div>
+                  <div class="br-card__content">
+                    <div class="br-card__title">Hacking Dashboard</div>
+                    <p class="br-card__text">Contains a series of tutorials, in which you will learn all about cyber
+                      security and computer
+                      hacking, which
+                      would help you
+                      to make websites, mobile devices etc, safe and secure by eliminating possible vulnerabilites.</p>
+                    <a class="br-card__btn flex-center" href="./br-hacking/index.html" title="Hacking Tutorial">Let's
+                      Learn</a>
+                  </div>
+                </div>
+              </li>
+              <li class="br-cards__item">
+                <div class="br-card">
+                  <div class="br-icon flex-center"><i class="las la-laptop-code la-5x"></i></div>
+                  <div class="br-card__content" style="background: var(--tertiary-color);">
+                    <div class="br-card__title">More Tutorials</div>
+                    <p class="br-card__text">Coming Soon</p>
+                    <!-- <button class="br-btn btn--block card__btn">Learn</button> -->
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+
+
+            <p style="margin: 60px;
+            font-size: 18px;
+            text-align: center;">
+              Check out our <code>online code editor</code> and <code>compiler/executor</code> called <b>BR Lab</b>. It
+              can translate Html, Css,
+              and
+              Javascript!
+            </p>
+
+
+            <!-- LAB -->
+
+            <div class="inline-lab bs-3" id="inline-lab1">
+              <div class="lab">
+                <div class="df config">
+                  <div class="f4">
+                    <button data-tooltip="Select your favourite theme for BR Lab" class="br-tooltip"
+                            aria-label="Tooltip" style="background: #36383f;">
+                      <select onchange="window.binaryRide.selectTheme()" id=select1>
+                        <option selected>default</option>
+                        <option>blackboard</option>
+                        <option>cobalt</option>
+                        <option>dracula</option>
+                        <option>monokai</option>
+                        <option>rubyblue</option>
+                        <option>the-matrix</option>
+                        <option>yonce</option>
+                      </select>
+                    </button>
+                    <button class="btn-format-code br-tooltip" onclick="window.binaryRide.formatCode()"
+                            data-tooltip="Indent Your Code">
+                      <i class="las la-align-center"></i>
+                    </button>
+                  </div>
+                  <div class="f1 flex-right">
+                    <button onclick="window.binaryRide.fullscreen('inline-lab1', true)" id="la-expand"
+                            data-tooltip="Fullscreen" class="br-tooltip" aria-label="Tooltip Expand"><i
+                         class="las la-expand la-lg flex-center"></i></button>
+                    <button onclick="window.binaryRide.fullscreen('inline-lab1', false)" id="la-compress"
+                            data-tooltip="Close Fullscreen" class="br-tooltip" aria-label="Tooltip Compress"><i
+                         class="las la-compress la-lg flex-center"></i></button>
+                  </div>
+                </div>
+                <div class="editor-container">
+                  <div id="br-stopper1"></div>
+                  <div id="br-dragbar1"></div>
+                  <div id="br-editor1">
+                    <span class="cmLoader">Loading...</span>
+                  </div>
+                  <div id="br-output1">
+                    <iframe frameborder="0" id="br-iframe1" allowfullscreen="true" title="Output Screen"></iframe>
+                  </div>
+                </div>
+
+                <script type='text/javascript'>
+                  function brLab1() {
+                    if (window.binaryRide) {
+                      if (window.binaryRide.isCodeMirrorJSReady) {
+                        import('./br-js/br-lab.js').then(module => {
+                          let brLabIDs = {
+                            editorID: "br-editor1",
+                            outputID: "br-output1",
+                            outputIframeID: "br-iframe1",
+                            dragBarID: "br-dragbar1",
+                            stopperID: "br-stopper1"
+                          }
+                          let editor = module.lab(brLabIDs);
+                          let editorCode =
+                            `
+                         <html>
+                          <style> body{ background-color: green; color: white; margin: 20px; } </style> 
+                          <body> <h1 style="text-decoration: underline;"> This is a heading </h1> <p> This is a paragraph. </p> <div> <input type="text" value="" id="nameInput" placeholder="Type your name here"/> <button onclick="displayName()"> Submit </button> </div> <p id="myName"> </p> <script> function displayName(){ let myName = document.getElementById("myName"); myName.innerHTML = "Welcome to BR Lab, <i>" + document.getElementById("nameInput").value + "</i> !"; } <\/script> <\/body> <\/html>`;
+
+                          let html_beautify = window.html_beautify(editorCode);
+                          let css_beautify = window.css_beautify(html_beautify);
+                          editor.getDoc().setValue(window.html_beautify(css_beautify));
+
+                          // THEME
+                          let input = document.getElementById("select1");
+
+                          function selectTheme() {
+                            let theme = input.options[input.selectedIndex].textContent;
+                            editor.setOption("theme", theme);
+                            // location.hash = "#" + theme;
+                            window.localStorage.setItem('theme-color', theme);
+                          }
+                          // let choice = (location.hash && location.hash.slice(1)) ||
+                          //   (document.location.search &&
+                          //     decodeURIComponent(document.location.search.slice(1)));
+                          let choice = window.localStorage.getItem('theme-color');
+                          if (choice) {
+                            input.value = choice;
+                            editor.setOption("theme", choice);
+                          }
+                          // CodeMirror.on(window, "hashchange", function () {
+                          //   let theme = location.hash.slice(1);
+                          //   if (theme) {
+                          //     input.value = theme;
+                          //     selectTheme();
+                          //   }
+                          // });
+
+                          window.binaryRide.selectTheme = selectTheme;
+                          // END THEME
+
+                          // Format Code
+                          function formatCode() {
+                            let html_beautify = window.html_beautify(editor.getValue());
+                            let css_beautify = window.css_beautify(html_beautify);
+                            editor.getDoc().setValue(window.html_beautify(css_beautify));
+                          }
+
+                          window.binaryRide.formatCode = formatCode;
+                          // END Format Code
+                        });
+                      } else {
+                        setTimeout(brLab1, 100);
+                      }
+                    } else {
+                      setTimeout(brLab1, 100);
+                    }
+                  }
+                  // $(document).ready(brLab1);
+                  document.addEventListener('DOMContentLoaded', function () {
+                    brLab1();
+                  });
+
+                </script>
+              </div>
+            </div>
+
+            <!-- END LAB -->
+
+            <p style="margin: 60px;
+            font-size: 18px;
+            text-align: center;">
+              <code>Binary Ride</code> is still in progress to provide more resources. But, as you read this, we are
+              working <code>....</code>
+            </p>
+          </div>
+
+
+
+        </div>
+
+        <!-- RSB -->
+        <div class="rsb">
+          <div class="br-theme-container flex-center">
+            <div class="theme">
+              <input class="flex-center bs-2 w-100 br-tooltip" type="color" id="favcolor" value="#000000"
+                     data-tooltip="Select your favourite theme for Binary Ride">
+              <button class="btn-green w-100" id="favcolor-btn">Save</button>
+              <br>
+              <a class="w-100" id="default-favcolor-btn"><i class="las la-undo-alt"
+                   style="filter: drop-shadow(0px 3px 5px grey);"></i><span class="ml-5"
+                      style="color: #555">Reset</span></a>
+            </div>
+            <!-- <div class="theme">
+              <div class="theme-heading bs-2 flex-center">Theme</div>
+              <div class="theme-label m-15">Select color</div>
+              <input class="flex-center bs-2 w-100 br-tooltip" type="color" id="favcolor" value="#000000"
+                data-tooltip="Select your favourite theme for Binary Ride">
+              <button class="btn-green w-100" id="favcolor-btn">Save</button>
+              <button class="btn-firebrick w-100" id="default-favcolor-btn">Default</button>
+            </div> -->
+
+          </div>
+
+          <div class="br-donate-container">
+            <div class="br-donate">
+              <p>
+                &nbsp; Thank you for your love and generous support &nbsp;<span style="font-size: 30px;">🤩</span>
+              </p>
+              <a class="br-donate-btn" href="./br-donate/index.html" title="Donate Page">DONATE <i
+                   class="las la-heart"></i></a>
+
+            </div>
+          </div>
+
+
+          <div class="br-social-media-container flex-center">
+            <div class="br-social-media-links flex-center">
+              <p>
+                <a href="https://twitter.com/binaryride" title="Follow Binary Ride on Twitter" target="_blank"
+                   style="margin-right: 5px;">
+                  <img src="twitter.svg" alt="twitter-link" style="width: 52px;" />
+                </a>
+                <br>
+                <br>
+
+                <a href="https://www.fb.com/binaryride" title="Follow Binary Ride on Facebook" target="_blank"
+                   style="margin-right: 5px;">
+                  <img src="facebook.svg" alt="fb-link" style="width: 48px;" />
+                </a>
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <!-- END RSB -->
+
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="br-footer">
+        <div class="br-footer-info">
+          <a class="br-footer-tab br-footer-search">
+            <script async src="https://cse.google.com/cse.js?cx=2aba2e4a18c77c4cf"></script>
+            <div class="gcse-search"></div>
+          </a>
+          <a class="br-footer-tab flex-center" href="./br-contact-us/index.html" title="Contact Us Page">
+            <i class="las la-envelope la-2x pr-10"></i> Contact Us
+          </a>
+          <a class="br-footer-tab flex-center" href="./br-lab/index.html" title="BR Lab">
+            <i class="las la-flask la-2x pr-10"></i> BR Lab
+          </a>
+          <a class="br-footer-copyright flex-center">
+            <i class="las la-copyright la-2x pr-10"></i>Copyright 2020. All Rights Reserved.
+          </a>
+
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- END CONTENT -->
+
+
+
+
+
+
+
+  <!-- Library scripts -->
+
+  <script src="./modernizr-3.8.0.min.js" defer></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+  <!-- <script defer>
+    window.jQuery || document.write('<script src="./br-js/vendor/jquery-3.4.1.min.js"><\/script>')
+  </script> -->
+  <script src="./jquery-3.4.1.min.js">
+  </script>
+
+
+  <!-- Google Analytics: change G-MYKNKSLP9J to be your site's ID. -->
+  <!-- <script>
+    window.ga = function () {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'G-MYKNKSLP9J', 'auto');
+    ga('set', 'transport', 'beacon');
+    ga('send', 'pageview')
+
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" defer></script> -->
+  <!-- End Library scripts -->
+
+  <!-- Custom scripts -->
+
+
+  <script src="./br-js/br-main.js" defer></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(() => {
+        let word = "🎊Welcome to Binary Ride !";
+        let i = 0;
+        let timer = setInterval(function () {
+          document.getElementById("type").innerHTML += word[i];
+          i++;
+          if (i > word.length - 1) {
+            clearInterval(timer)
+          }
+        }, 150)
+      }, 0)
+    });
+
+  </script>
+
+  <script src="./br-js/br-lab-inline-init.js"></script>
+
+  <!-- End Custom scripts -->
+
+  <!-- low priority -->
+  <!-- <script src="./br-js/br-particle-anim.min.js" defer></script> -->
+  <!-- <script src="./br-js/plugins.js" defer></script> -->
+  <!-- End low priority -->
+
+</body>
+
+</html>

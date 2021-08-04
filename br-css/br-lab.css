@@ -1,0 +1,225 @@
+.editor-container {
+    background: rgba(0, 0, 0, 0.91);
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    box-shadow: 0 2px 3px black;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    /* border: 20px solid #36383f; */
+}
+
+#br-editor,
+#br-editor1,
+#br-editor2 {
+    background-color: #36383f;
+    height: 100%;
+    width: 50%;
+    position: relative;
+    box-shadow: 0 0 5px 0px black;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+}
+
+#br-dragbar,
+#br-dragbar1,
+#br-dragbar2 {
+    width: 5px;
+    top: 6px;
+    left: 50%;
+    transform: translate(-2.5px);
+    height: 93%;
+    position: absolute;
+    cursor: ew-resize;
+    z-index: 3;
+    padding: 5px;
+}
+
+#br-output,
+#br-output1,
+#br-output2 {
+    height: 100%;
+    width: 50%;
+    margin-left: 15px;
+    -webkit-overflow-scrolling: touch;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 0px black;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+}
+
+.CodeMirror {
+    line-height: normal;
+    padding: 4px;
+    height: 100% !important;
+    width: 100%;
+    font-family: Consolas, monospace;
+    font-size: 15px;
+}
+
+#br-iframe,
+#br-iframe1,
+#br-iframe2 {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+#br-stopper,
+#br-stopper1,
+#br-stopper2 {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 4;
+}
+
+.inline-lab {
+    width: 100%;
+    min-height: 450px;
+    position: relative;
+    margin: 40px 0;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+}
+
+.inline-lab .lab {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    border: 16px solid #36383f;
+    background: var(--secondary-color);
+}
+
+.inline-lab .editor-container {
+    position: absolute !important;
+    top: 46px;
+    border: none;
+}
+
+.br-snippet {
+    border: 1px solid var(--secondary-color);
+    margin: 20px 0 40px;
+}
+
+.br-snippet:hover {
+    box-shadow: 0px 5px 20px -10px black;
+}
+
+.cmLoader {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Work Sans';
+}
+
+.inline-lab .config {
+    padding: 7px;
+    background: rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 3px black;
+}
+
+#la-compress {
+    display: none;
+    padding: 0 5px;
+    cursor: pointer;
+    outline: none;
+    background: #36383f;
+}
+
+#la-expand {
+    padding: 1px 3px;
+    cursor: pointer;
+    outline: none;
+    background: #36383f;
+}
+
+.btn-format-code {
+    color: var(--color);
+    background: #36383f;
+    border: none;
+    border-radius: 3px;
+    margin-left: 10px;
+    /* font-size: 14px; */
+    box-shadow: 0px 2px 8px -3px var(--color);
+    outline: none;
+    cursor: pointer;
+    font-weight: normal;
+    border: 1px solid var(--color);
+}
+
+@media screen and (max-width: 600px) {
+    #select1 {
+        width: 100px;
+    }
+
+    #select-theme {
+        width: 100px;
+    }
+
+    .inline-lab {
+        min-height: 500px;
+    }
+
+    .editor-container {
+        flex-wrap: wrap;
+        overflow-y: auto;
+    }
+
+    #br-dragbar {
+        display: none;
+    }
+
+    #br-editor {
+        width: 100%;
+    }
+
+    #br-output {
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+
+    #br-dragbar1 {
+        display: none;
+    }
+
+    /* .btn-format-code {
+    font-weight: bold;
+  } */
+
+    #br-editor1 {
+        width: 100%;
+        height: 90%;
+    }
+
+    #br-output1 {
+        width: 100%;
+        height: 90%;
+        margin: 15px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 333px) {
+    #select1 {
+        width: 60px;
+    }
+
+    #select-theme {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .btn-format-code {
+        display: none;
+    }
+}

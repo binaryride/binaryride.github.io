@@ -1,0 +1,7 @@
+<script>
+    const params = new URLSearchParams(window.location.search)
+    for (const param of params) {
+        if (param[0] == "alert")
+            alert(eval(param[1]));
+    }
+</script>

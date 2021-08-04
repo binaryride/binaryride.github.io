@@ -1,0 +1,1079 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SEO Tutorial - SEO Techniques and Methods</title>
+  <meta name="description"
+    content="Easy to understand tutorials on computer's hardware, software, programming, algorithms, SEO, networking, artificial intelligence (AI), cyber security, hacking etc">
+
+  <!--<meta name="Keywords"
+    content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,binary,binaryride,binary ride,tutorials,programming,ai,artificial intelligence,hardware,software,programming languages,networking,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips,computer, hacking, cyber security, owasp, seo">-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="apple-touch-icon" href="../logo2.jpg">
+  <!-- Place favicon.ico in the root directory -->
+
+
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../br-css/br-main.css">
+  <link rel="stylesheet" href="../br-css/br-lab-theme.css">
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+
+
+
+  <style>
+    /* MAIN */
+    :root {
+      --primary-color: black;
+      --primaryrgb-color: 0, 0, 0;
+
+      --secondary-color: #ccc;
+      --secondaryrgb-color: 204, 204, 204;
+
+      --tertiary-color: #eee;
+      --tertiaryrgb-color: 238, 238, 238;
+
+      --color: #0F0;
+      --elegant-color: #1b2426;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      /* background: #f1f1f1; */
+      background: var(--primary-color);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+      background: var(--primary-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      /* background: #888; */
+      background: white;
+      /* border-radius: 10px; */
+      border: 1px solid var(--primary-color);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      /* background: #555; */
+      background: #f1f1f1;
+      /* background: white; */
+      ;
+    }
+
+    ::-webkit-scrollbar-button {
+      background: var(--primary-color);
+      /* border-radius: 0 10px 10px 0; */
+    }
+
+    ::-webkit-scrollbar-corner {}
+
+    ::-webkit-resizer {}
+
+
+
+    html,
+    select,
+    button {
+      color: #222;
+      font-size: 1em;
+      line-height: 1.7;
+      font-family: Verdana, sans-serif;
+      text-rendering: optimizeSpeed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /*
+     * Remove text-shadow in selection highlight:
+     * https://twitter.com/miketaylr/status/12228805301
+     *
+     * Vendor-prefixed and regular ::selection selectors cannot be combined:
+     * https://stackoverflow.com/a/16982510/7133471
+     *
+     * Customize the background color to match your design.
+     */
+
+    ::-moz-selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    ::selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+
+    /*
+     * A better looking default horizontal rule
+     */
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    /*
+     * Remove the gap between audio, canvas, iframes,
+     * images, videos and the bottom of their containers:
+     * https://github.com/h5bp/html5-boilerplate/issues/440
+     */
+
+    audio,
+    canvas,
+    iframe,
+    img,
+    svg,
+    video {
+      vertical-align: middle;
+    }
+
+    /*
+     * Remove default fieldset styles.
+     */
+
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    /*
+     * Allow only vertical resizing of textareas.
+     */
+
+    textarea {
+      resize: vertical;
+    }
+
+    /* ==========================================================================
+       Browser Upgrade Prompt
+       ========================================================================== */
+
+    .browserupgrade {
+      margin: 0.2em 0;
+      background: #ccc;
+      color: #000;
+      padding: 0.2em 0;
+    }
+
+    /* ==========================================================================
+       Author's custom styles
+       ========================================================================== */
+
+    /* ==========================================================================
+       Helper classes
+       ========================================================================== */
+
+    /*
+     * Hide visually and from screen readers
+     */
+
+    .hidden {
+      display: none !important;
+    }
+
+    /*
+    * Hide only visually, but have it available for screen readers:
+    * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+    *
+    * 1. For long content, line feeds are not interpreted as spaces and small width
+    *    causes content to wrap 1 word per line:
+    *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+    */
+
+    .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+      /* 1 */
+    }
+
+    /*
+    * Extends the .sr-only class to allow the element
+    * to be focusable when navigated to via the keyboard:
+    * https://www.drupal.org/node/897638
+    */
+
+    .sr-only.focusable:active,
+    .sr-only.focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      white-space: inherit;
+      width: auto;
+    }
+
+    /*
+    * Hide visually and from screen readers, but maintain layout
+    */
+
+    .invisible {
+      visibility: hidden;
+    }
+
+    /*
+    * Clearfix: contain floats
+    *
+    * For modern browsers
+    * 1. The space content is one way to avoid an Opera bug when the
+    *    `contenteditable` attribute is included anywhere else in the document.
+    *    Otherwise it causes space to appear at the top and bottom of elements
+    *    that receive the `clearfix` class.
+    * 2. The use of `table` rather than `block` is only necessary if using
+    *    `:before` to contain the top-margins of child elements.
+    */
+
+    .clearfix:before,
+    .clearfix:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */
+    }
+
+    .clearfix:after {
+      clear: both;
+    }
+
+    /* ==========================================================================
+       EXAMPLE Media Queries for Responsive Design.
+       These examples override the primary ('mobile first') styles.
+       Modify as content requires.
+       ========================================================================== */
+
+    @media only screen and (min-width: 35em) {
+      /* Style adjustments for viewports that meet the condition */
+    }
+
+    @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+      /* Style adjustments for high resolution devices */
+    }
+
+    /* ==========================================================================
+       Print styles.
+       Inlined to avoid the additional HTTP request:
+       https://www.phpied.com/delay-loading-your-print-css/
+       ========================================================================== */
+
+    @media print {
+
+      *,
+      *:before,
+      *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      a,
+      a:visited {
+        text-decoration: underline;
+      }
+
+      a[href]:after {
+        content: " ("attr(href) ")";
+      }
+
+      abbr[title]:after {
+        content: " ("attr(title) ")";
+      }
+
+      /*
+         * Don't show links that are fragment identifiers,
+         * or use the `javascript:` pseudo protocol
+         */
+      a[href^="#"]:after,
+      a[href^="javascript:"]:after {
+        content: "";
+      }
+
+      pre {
+        white-space: pre-wrap !important;
+      }
+
+      pre,
+      blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+      }
+
+      /*
+         * Printing Tables:
+         * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+         */
+      thead {
+        display: table-header-group;
+      }
+
+      tr,
+      img {
+        page-break-inside: avoid;
+      }
+
+      p,
+      h2,
+      h3 {
+        orphans: 3;
+        widows: 3;
+      }
+
+      h2,
+      h3 {
+        page-break-after: avoid;
+      }
+    }
+
+    /* CONTENT */
+    .br-page-container {
+      position: absolute;
+      top: 0;
+      margin-top: 52px;
+      /* height: 100%; */
+      margin-left: 230px;
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: fill-available;
+    }
+
+
+
+    @media screen and (max-width: 999px) {
+
+      .br-page-container {
+        margin-left: 0px;
+      }
+
+      .book-title {
+        display: none !important;
+      }
+
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .br-page-container .page {
+        width: 100%;
+        /* padding-top: 20px; */
+      }
+
+      .page .content {
+        padding: 0 30px 60px;
+      }
+
+    }
+
+
+    @media screen and (max-width: 460px) {
+
+      .page .heading {
+        /* top: 56px; */
+        flex-wrap: wrap-reverse;
+        font-size: 25px;
+
+      }
+
+    }
+
+    /* NAV-LOGO */
+    .nav-logo {
+      padding:10px 10px 10px 0;
+      letter-spacing: 2px;
+      color: white;
+      animation: blur 5s ease-out normal;
+      -webkit-animation: blur 5s ease-out normal;
+      text-shadow: 0px 0px 5px black;
+      cursor: pointer;
+    }
+
+    .nav-logo:nth-child(1) {
+      animation-delay: 0.1s;
+      -webkit-animation-delay: 0.1s;
+    }
+
+    @keyframes blur {
+      0% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+      }
+
+      5% {
+        text-shadow: 0 0 90px #fff;
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      20% {
+        text-shadow: 0 0 0px #fff;
+      }
+
+      80% {
+        text-shadow: 0 0 0px #fff;
+      }
+
+      100% {
+        color: #fff;
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes blur {
+      0% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+        color: transparent;
+      }
+
+      5% {
+        text-shadow: 0 0 90px #fff;
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      20% {
+        text-shadow: 0 0 0px #fff;
+      }
+
+      80% {
+        text-shadow: 0 0 0px #fff;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+    /* NAV */
+    .nav {
+      display: flex;
+      position: relative;
+      background: var(--primary-color);
+      padding: 0 1em;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .nav__bg-wrapper {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+      will-change: opacity;
+    }
+
+    .nav__bg-wrapper.is-visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .nav__bg {
+      width: 300px;
+      height: 200px;
+      background: white;
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+      transform-origin: left top;
+      will-change: transform;
+    }
+
+    .nav__bg.is-animatable {
+      transition: .3s;
+    }
+
+    .nav__sections {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+    }
+
+    .nav__section {
+      position: relative;
+    }
+
+    .nav__section>a {
+      text-decoration: none;
+      text-shadow: 0px 0px 5px black;
+    }
+
+    .nav__section:hover .nav__label,
+    .nav__active,
+    .br-nav-lab:hover {
+      background: black;
+      outline: 1px dashed var(--color);
+      color: var(--color) !important;
+      cursor: pointer;
+    }
+
+    .nav__section:hover .nav__links {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .nav__label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 10px 15px;
+      color: white;
+      transition: .3s;
+      font-size: 14px;
+    }
+
+    .nav__links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 1.875em;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    .nav__links--large {
+      width: 25em;
+    }
+
+    .nav__links--medium {
+      width: 18.75em;
+    }
+
+    .nav__links--small {
+      width: 12.5em;
+    }
+
+    .nav__item {
+      color: #666;
+    }
+
+    .nav__item:not(:last-of-type) {
+      margin-bottom: 0.625em;
+    }
+
+    .br-nav-lab {
+      color: white;
+      font-size: 14px;
+      right: 1em;
+      position: absolute;
+      height: 100%;
+      padding: 10px;
+      text-decoration: none;
+      text-shadow: 0px 0px 5px black;
+    }
+
+    .br-nav-menu {
+      display: none;
+      color: white;
+      right: 0;
+      position: absolute;
+      height: 100%;
+      text-decoration: none;
+      text-shadow: 0px 0px 5px black;
+      padding: 0 4px;
+    }
+
+    @media screen and (max-width: 999px) {
+
+      .nav__sections {
+        display: none;
+      }
+
+      .br-nav-lab {
+        display: none;
+      }
+
+      .br-nav-menu {
+        display: block;
+      }
+
+    }
+
+    @media screen and (max-width: 300px) {
+      .br-inary {
+        display: none;
+      }
+    }
+
+/* Search */
+    .gsc-control-cse {
+      border-color: var(--primary-color) !important;
+      background-color: var(--primary-color) !important;
+      padding: 0 !important;
+    }
+
+    .gsc-search-box td {
+      border-bottom: none;
+      padding: 0 5px !important;
+    }
+
+    form.gsc-search-box,
+    table.gsc-search-box {
+      margin-bottom: 0 !important;
+    }
+
+    .gsib_a {
+      padding: 0 5px !important;
+    }
+
+    .gsc-search-button-v2 {
+      border-bottom-right-radius: 8px !important;
+      border-top-right-radius: 8px !important;
+    }
+
+    /* Search */
+
+</style>
+
+  <script data-ad-client="ca-pub-1771672755804464" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+
+  <!-- Add site or application content here -->
+
+  <!-- NAV -->
+  <div class="nav">
+
+    <div class="br-menu">
+      <i class="las la-bars la-lg"></i>
+    </div>
+
+    <div class="nav-logo flex-center" id="nav-logo">
+      <i class="las la-terminal la-2x pr-10"></i>
+      <b style="border-bottom: 1px solid var(--color);;color: var(--color);">B</b><span
+        class="br-inary">inary&nbsp;</span><b
+        style="border-bottom: 1px solid var(--color);;color: var(--color);">R</b><span class="br-inary">ide</span>
+    </div>
+
+
+    <ul class="nav__sections">
+      <li class="nav__section"><a class="nav__label" href="../br-get-started/index.html" title="Computer Tutorial">Get Started</a>
+      </li>
+      <li class="nav__section"><a class="nav__label" href="../br-javascript/index.html" title="Javascript Tutorial">Javascript</a>
+      </li>
+      <li class="nav__section"><a class="nav__label nav__active" href="../br-seo/index.html" title="SEO Tutorial">SEO</a>
+      </li>
+      <li class="nav__section"><a class="nav__label" href="../br-hacking/index.html" title="Hacking Tutorial">Hacking</a>
+      </li>
+      <li class="br-search nav__section flex-center">
+        <script async src="https://cse.google.com/cse.js?cx=2aba2e4a18c77c4cf"></script>
+        <div class="gcse-search"></div>
+      </li>
+    </ul>
+
+    <a class="br-nav-lab flex-center" href="../br-lab/index.html" title="BR Lab">
+      <i class="las la-flask la-2x pr-10"></i> BR Lab
+    </a>
+    <div class="br-nav-menu br-dropdown">
+      <i class="las la-ellipsis-v la-2x pr-10 mt-10"></i>
+      <div class="br-dropdown-content">
+        <a class="br-dropdown-links flex-center" href="../br-lab/index.html" title="BR Lab">
+          <i class="las la-flask la-2x pr-10"></i>BR Lab
+        </a>
+        <!-- seo menus -->
+        <a class="br-dropdown-links flex-center" href="../br-get-started/index.html" title="Computer Tutorial">Get Started</a>
+        <a class="br-dropdown-links flex-center" href="../br-javascript/index.html" title="Javascript Tutorial">Javascript</a>
+        <a class="br-dropdown-links flex-center" href="../br-hacking/index.html" title="Hacking Tutorial">Hacking</a>
+      </div>
+    </div>
+  </div>
+  <!-- END NAV -->
+
+
+
+  <!-- CONTENT -->
+  <div class="br-main-container">
+    <!-- LSB -->
+    <div class="sidebar">
+      <button class="accordion accordion_active ls-1">SEO</button>
+      <div class="panel">
+        <a href="./index.html">Introduction</a>
+        <a class="active" title="SEO Techniques and Methods">SEO Techniques and Methods</a>
+        <a href="./seo-best keywords-for-stock-market-usa.html" title="SEO Best Keywords for Stock Market (USA)">SEO Best Keywords for Stock Market (USA)</a>
+        <a href="./25-seo-checklist-you-need-for-more-traffic-on-your-website-seo-tips-&-tricks.html">Top 25 SEO
+          checklist for more traffic on your website</a>
+        <a href="./on-page-seo-vs-off-page-seo.html" title="On Page SEO and Off Page SEO">On Page SEO and Off Page SEO</a>
+        <a href="./list-of-meta-tags-for-seo-search-engine-optimization.html" title="List of Meta Tags for SEO">List of Meta Tags for SEO</a>
+      </div>
+      <div id="br-sidebar-buffer"></div>
+
+      <!-- <canvas id="br-particle-anim"></canvas> -->
+    </div>
+    <!-- END LSB -->
+
+    <div class="br-page-container">
+
+
+      <div class="br-prsb">
+        <div class="page">
+          <!-- <div class="fade-line"></div> -->
+          <div class="heading bs-2">
+            <h1 class="chapter-title">
+              SEO Techniques and Methods
+            </h1>
+            <div class="book-title">
+              SEO
+            </div>
+          </div>
+
+          <div class="content">
+            <h2>
+              How to get indexed in a search engine ?
+            </h2>
+            <p>
+              The leading search engines, such as Google, Bing and Yahoo!, use crawlers to find pages for their
+              algorithmic search results. Pages that are linked from other search engine indexed pages do not need to be
+              submitted because they are found automatically. The Yahoo! Directory and DMOZ, two major directories which
+              closed in 2014 and 2017 respectively, both required manual submission and human editorial review.[41]
+              Google offers Google Search Console, for which an XML Sitemap feed can be created and submitted for free
+              to ensure that all pages are found, especially pages that are not discoverable by automatically following
+              links[42] in addition to their URL submission console.[43] Yahoo! formerly operated a paid submission
+              service that guaranteed crawling for a cost per click;[44] however, this practice was discontinued in
+              2009.
+            </p>
+            <p>
+              Search engine crawlers may look at a number of different factors when crawling a site. Not every page is
+              indexed by the search engines. The distance of pages from the root directory of a site may also be a
+              factor in whether or not pages get crawled.[45]
+            </p>
+            <p>
+              Today, most people are searching on Google using a mobile device.[46] In November 2016, Google announced a
+              major change to the way crawling websites and started to make their index mobile-first, which means the
+              mobile version of a given website becomes the starting point for what Google includes in their index.[47]
+              In May 2019, Google updated the rendering engine of their crawler to be the latest version of Chromium (74
+              at the time of the announcement). Google indicated that they would regularly update the Chromium rendering
+              engine to the latest version.[48] In December 2019, Google began updating the User-Agent string of their
+              crawler to reflect the latest Chrome version used by their rendering service. The delay was to allow
+              webmasters time to update their code that responded to particular bot User-Agent strings. Google ran
+              evaluations and felt confident the impact would be minor.[49]
+            </p>
+
+            <h2>
+              How preventing crawling works ?
+            </h2>
+            <p>
+              To avoid undesirable content in the search indexes, webmasters can instruct spiders not to crawl certain
+              files or directories through the standard robots.txt file in the root directory of the domain.
+              Additionally, a page can be explicitly excluded from a search engine's database by using a meta tag
+              specific to robots (usually
+              &lt;meta name=&apos;robots&apos; content=&apos;noindex&apos;&gt; ). When a search engine visits a site, the robots.txt located in
+              the root directory is the first file crawled. The robots.txt file is then parsed and will instruct the
+              robot as to which pages are not to be crawled. As a search engine crawler may keep a cached copy of this
+              file, it may on occasion crawl pages a webmaster does not wish crawled. Pages typically prevented from
+              being crawled include login specific pages such as shopping carts and user-specific content such as search
+              results from internal searches. In March 2007, Google warned webmasters that they should prevent indexing
+              of internal search results because those pages are considered search spam.[50]
+            </p>
+            <h4>
+              Examples
+            </h4>
+            <p>
+              This example tells all robots that they can visit all files because the wildcard * stands for all robots
+              and the Disallow directive has no value, meaning no pages are disallowed.
+            </p>
+            <div class="br-meta-ex">
+              <pre>
+User-agent: *
+Allow: /
+                </pre>
+            </div>
+            <p>
+              The same result can be accomplished with an empty or missing robots.txt file.
+            </p>
+            <p>
+              This example tells all robots to stay out of a website:
+            </p>
+            <div class="br-meta-ex">
+              <pre>
+User-agent: *
+Disallow: /
+                  </pre>
+            </div>
+            <p>
+              This example tells all robots not to enter three directories:
+            </p>
+            <div class="br-meta-ex">
+              <pre>
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
+                    </pre>
+            </div>
+            <p>
+              This example tells all robots to stay away from one specific file:
+            </p>
+            <div class="br-meta-ex">
+              <pre>
+User-agent: *
+Disallow: /directory/file.html
+                      </pre>
+            </div>
+            <p>
+              All other files in the specified directory will be processed.
+            </p>
+            <p>
+              This example tells a specific robot to stay out of a website:
+            </p>
+            <div class="br-meta-ex">
+              <pre>
+User-agent: BadBot # replace 'BadBot' with the actual user-agent of the bot
+Disallow: /
+                        </pre>
+            </div>
+            <p>
+              This example tells two specific robots not to enter one specific directory:
+            </p>
+            <div class="br-meta-ex">
+              <pre>
+User-agent: BadBot # replace 'BadBot' with the actual user-agent of the bot
+User-agent: Googlebot
+Disallow: /private/
+                          </pre>
+            </div>
+            <p>
+              Example demonstrating how comments can be used:
+            </p>
+            <div class="br-meta-ex">
+              <pre>
+# Comments appear after the "#" symbol at the start of a line, or after a directive
+User-agent: * # match all bots
+Disallow: / # keep them out
+                            </pre>
+            </div>
+            <p>
+              It is also possible to list multiple robots with their own rules. The actual robot string is defined by
+              the crawler. A few robot operators, such as Google, support several user-agent strings that allow the
+              operator to deny access to a subset of their services by using specific user-agent strings
+            </p>
+            <p>
+              Example demonstrating multiple user-agents:
+            </p>
+            <div class="br-meta-ex">
+              <pre>
+User-agent: googlebot        # all Google services
+Disallow: /private/          # disallow this directory
+
+User-agent: googlebot-news   # only the news service
+Disallow: /                  # disallow everything
+
+User-agent: *                # any robot
+Disallow: /something/        # disallow this directory
+                              </pre>
+            </div>
+
+
+            <h2>
+              Increasing prominence
+            </h2>
+            <p>
+              A variety of methods can increase the prominence of a webpage within the search results. Cross linking
+              between pages of the same website to provide more links to important pages may improve its visibility.[51]
+              Writing content that includes frequently searched keyword phrase, so as to be relevant to a wide variety
+              of search queries will tend to increase traffic.[51] Updating content so as to keep search engines
+              crawling back frequently can give additional weight to a site. Adding relevant keywords to a web page's
+              metadata, including the title tag and meta description, will tend to improve the relevancy of a site's
+              search listings, thus increasing traffic. URL canonicalization of web pages accessible via multiple URLs,
+              using the canonical link element[52] or via 301 redirects can help make sure links to different versions
+              of the URL all count towards the page's link popularity score.
+            </p>
+            <h2>
+              White hat versus black hat techniques
+            </h2>
+            <p>
+              SEO techniques can be classified into two broad categories: techniques that search engine companies
+              recommend as part of good design ("white hat"), and those techniques of which search engines do not
+              approve ("black hat"). The search engines attempt to minimize the effect of the latter, among them
+              spamdexing. Industry commentators have classified these methods, and the practitioners who employ them, as
+              either white hat SEO, or black hat SEO.[53] White hats tend to produce results that last a long time,
+              whereas black hats anticipate that their sites may eventually be banned either temporarily or permanently
+              once the search engines discover what they are doing.
+            </p>
+            <p>
+              An SEO technique is considered white hat if it conforms to the search engines' guidelines and involves no
+              deception. As the search engine guidelines[18][19][55] are not written as a series of rules or
+              commandments, this is an important distinction to note. White hat SEO is not just about following
+              guidelines but is about ensuring that the content a search engine indexes and subsequently ranks is the
+              same content a user will see. White hat advice is generally summed up as creating content for users, not
+              for search engines, and then making that content easily accessible to the online "spider" algorithms,
+              rather than attempting to trick the algorithm from its intended purpose. White hat SEO is in many ways
+              similar to web development that promotes accessibility,[56] although the two are not identical.
+            </p>
+            <p>
+              Black hat SEO attempts to improve rankings in ways that are disapproved of by the search engines, or
+              involve deception. One black hat technique uses hidden text, either as text colored similar to the
+              background, in an invisible div, or positioned off screen. Another method gives a different page depending
+              on whether the page is being requested by a human visitor or a search engine, a technique known as
+              cloaking. Another category sometimes used is grey hat SEO. This is in between black hat and white hat
+              approaches, where the methods employed avoid the site being penalized but do not act in producing the best
+              content for users. Grey hat SEO is entirely focused on improving search engine rankings.
+            </p>
+            <p>
+              Search engines may penalize sites they discover using black or grey hat methods, either by reducing their
+              rankings or eliminating their listings from their databases altogether. Such penalties can be applied
+              either automatically by the search engines' algorithms, or by a manual site review. One example was the
+              February 2006 Google removal of both BMW Germany and Ricoh Germany for use of deceptive practices.[57]
+              Both companies, however, quickly apologized, fixed the offending pages, and were restored to Google's
+              search engine results page.
+            </p>
+
+
+            <!-- Navigation -->
+            <div class="page-navigation">
+              <div class="btn-left">
+                <a class="a-green w-100" id="prev-btn" href="./index.html"><i class="las la-caret-left"></i> Previous</a>
+              </div>
+              <div class="btn-right">
+                <a class="a-green w-100 " id="next-btn" href="./seo-best keywords-for-stock-market-usa.html">Next <i
+                    class="las la-caret-right"></i></a>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <!-- END Navigation -->
+
+          </div>
+
+
+
+        </div>
+
+        <!-- RSB -->
+        <div class="rsb">
+          <div class="br-theme-container flex-center">
+            <div class="theme">
+              <input class="flex-center bs-2 w-100 br-tooltip" type="color" id="favcolor" value="#000000"
+                data-tooltip="Select your favourite theme for Binary Ride">
+              <button class="btn-green w-100" id="favcolor-btn">Save</button>
+              <br>
+              <a class="w-100" id="default-favcolor-btn"><i class="las la-undo-alt"
+                  style="filter: drop-shadow(0px 3px 5px grey);"></i><span class="ml-5"
+                  style="color: #555">Reset</span></a>
+            </div>
+
+          </div>
+
+          <div class="br-donate-container">
+            <div class="br-donate">
+              <p>
+                &nbsp; Thank you for your love and generous support &nbsp;<span style="font-size: 20px;">&#128516</span>
+              </p>
+              <a class="br-donate-btn" href="../br-donate/index.html" title="Donate Page">DONATE <i class="las la-heart"></i></a>
+
+            </div>
+          </div>
+
+        <div class="br-social-media-container flex-center">
+            <div class="br-social-media-links flex-center">
+              <p>
+                <a href="https://twitter.com/binaryride" title="Follow Binary Ride on Twitter" target="_blank" style="margin-right: 5px;">
+                  <img src="./../twitter.svg" alt="twitter-link" style="width: 52px;" />
+                </a>
+                <br>
+                <br>
+
+                <a href="https://www.fb.com/binaryride" title="Follow Binary Ride on Facebook" target="_blank" style="margin-right: 5px;">
+                  <img src="./../facebook.svg" alt="fb-link" style="width: 48px;" />
+                </a>
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <!-- END RSB -->
+
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="br-footer">
+        <div class="br-footer-info">
+          <a class="br-footer-tab br-footer-search">
+            <script async src="https://cse.google.com/cse.js?cx=2aba2e4a18c77c4cf"></script>
+            <div class="gcse-search"></div>
+          </a>
+          <a class="br-footer-tab flex-center" href="../index.html" title="Home Page">
+            <i class="las la-home la-2x pr-10"></i> Home
+          </a>
+          <a class="br-footer-tab flex-center" href="../br-contact-us/index.html" title="Contact Us Page">
+            <i class="las la-terminal la-2x pr-10"></i> Contact Us
+          </a>
+          <a class="br-footer-tab flex-center" href="../br-lab/index.html" title="BR Lab">
+            <i class="las la-flask la-2x pr-10"></i> BR Lab
+          </a>
+          <a class="br-footer-copyright flex-center">
+            <i class="las la-copyright la-2x pr-10"></i>Copyright 2020. All Rights Reserved.
+          </a>
+
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- END CONTENT -->
+
+
+
+
+
+
+  <!-- Library scripts -->
+
+  <script src="../modernizr-3.8.0.min.js" defer></script>
+  <script src="../jquery-3.4.1.min.js">
+  </script>
+
+  <!-- Custom scripts -->
+  <script src="../br-js/br-main.js" defer></script>
+
+</body>
+
+</html>

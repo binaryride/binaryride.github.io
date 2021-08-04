@@ -1,0 +1,22 @@
+.br-tooltip {
+  position: relative;
+  font-weight: bold;
+}
+
+.br-tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  transform: translate(-80%);
+  top: 30px;
+  min-width: 63px;
+  padding: 8px 10px;
+  color: #222;
+  font-size: 0.80em;
+  line-height: 1.4;
+  font-family: 'Work Sans';
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 10px !important;
+  background: var(--tertiary-color) !important;
+  z-index: 100;
+  border-radius: 0.25em;
+  border: 1px solid rgba(24,28,33,.06);
+}

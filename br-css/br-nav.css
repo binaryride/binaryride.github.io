@@ -1,0 +1,132 @@
+  .nav {
+    display: flex;
+    position: relative;
+    background: var(--primary-color);
+    padding: 0 1em;
+    /* box-shadow: 0px 10px 25px -15px black; */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .nav__bg-wrapper {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    will-change: opacity;
+  }
+
+  .nav__bg-wrapper.is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .nav__bg {
+    width: 300px;
+    height: 200px;
+    background: white;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+    transform-origin: left top;
+    will-change: transform;
+    /* box-shadow:
+      0 50px 100px -20px rgba(50, 50, 93, .25),
+      0 30px 60px -30px rgba(0, 0, 0, .3); */
+  }
+
+  .nav__bg.is-animatable {
+    transition: .3s;
+  }
+
+  .nav__sections {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+  }
+
+  .nav__section {
+    position: relative;
+  }
+
+  .nav__section>a {
+    text-decoration: none;
+    text-shadow: 0px 0px 5px black;
+  }
+
+  .nav__section:hover .nav__label,
+  .nav__active,
+  .br-nav-lab:hover {
+    /* opacity: .6; */
+    /* text-shadow: 0px -2px 0px rgba(0, 0, 0, 1), 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5); */
+    background: black;
+    outline: 1px dashed white;
+    cursor: pointer;
+  }
+
+  .nav__section:hover .nav__links {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .nav__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px;
+    color: white;
+    transition: .3s;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1.875em;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+  }
+
+  .nav__links--large {
+    width: 25em;
+  }
+
+  .nav__links--medium {
+    width: 18.75em;
+  }
+
+  .nav__links--small {
+    width: 12.5em;
+  }
+
+  .nav__item {
+    color: #666;
+  }
+
+  .nav__item:not(:last-of-type) {
+    margin-bottom: 0.625em;
+  }
+
+  .br-nav-lab {
+    color: white;
+    right: 1em;
+    position: absolute;
+    height: 100%;
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: 0px 0px 5px black;
+  }
+
+  @media screen and (max-width: 999px) {
+
+    .nav__sections {
+      display: none;
+    }
+
+  }

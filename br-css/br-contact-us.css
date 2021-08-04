@@ -1,0 +1,12 @@
+.contact-us-form {
+  padding: 10px;
+}
+
+.contact-us-form input, textarea {
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    height: 35px;
+    margin: 10px 0;
+    width: 100%;
+}

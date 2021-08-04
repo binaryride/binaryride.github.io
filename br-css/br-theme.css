@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #000000;
+  --primaryrgb-color: 37, 40, 61;
+  --primary-start: #402f70;
+  --primary-end: #482e81;
+  --primary-bgcolor: linear-gradient(120deg, #402f70 -17.43%, #482e81 104.46%);
+
+  --secondary-color: #ccc;
+  --secondaryrgb-color: 204, 204, 204;
+
+  --tertiary-color: #eee;
+  --tertiaryrgb-color: 238, 238, 238;
+
+--color: #0F0;
+      --elegant-color: #1b2426;
+}

