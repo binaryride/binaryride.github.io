@@ -6,14 +6,14 @@ RewriteCond %{HTTP_HOST} ^www\.binaryride\.com$
 
 RewriteRule ^/?$ "https\:\/\/binaryride\.com\/" [R=301,L]
 
-ErrorDocument 400 https://binaryride.com/
+ErrorDocument 400 https://binaryride.github.io/
 
-ErrorDocument 401 https://binaryride.com/
+ErrorDocument 401 https://binaryride.github.io/
 
-ErrorDocument 403 https://binaryride.com/
+ErrorDocument 403 https://binaryride.github.io/
 
-ErrorDocument 404 https://binaryride.com/
+ErrorDocument 404 https://binaryride.github.io/
 
-ErrorDocument 500 https://binaryride.com/
+ErrorDocument 500 https://binaryride.github.io/
 
-ErrorDocument 503 https://binaryride.com/
+ErrorDocument 503 https://binaryride.github.io/
