@@ -1,7 +1,7 @@
 window.binaryRide = {};
 
 $('#nav-logo').on("click", () => {
-  window.location.href = "www.binaryride.github.io";
+  window.location.href = "https://binaryride.github.io";
 });
 
 // accordion

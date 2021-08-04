@@ -1,5 +1,5 @@
 $('#nav-logo').on("click", () => {
-  window.location.href = "www.binaryride.github.io";
+  window.location.href = "https://binaryride.github.io";
 })
 
 $.getScript("../br-lab/js-beautify/beautify-html.min.js", function (data, textStatus, jqxhr) {
