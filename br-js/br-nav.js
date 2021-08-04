@@ -28,6 +28,6 @@
 
 export function logo() {
   $('#nav-logo').on("click", () => {
-    window.location.href = "https://www.binaryride.github.io";
+    window.location.href = "www.binaryride.github.io";
   })
 }
